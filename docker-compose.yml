@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  evenly-distribute:
+    container_name: evenly-distribute
+    image: evenly-distribute
+    user: app
+    build:
+      context: .
+    volumes:
+      - ./:/var/www/evenly-distribute:cached
+
